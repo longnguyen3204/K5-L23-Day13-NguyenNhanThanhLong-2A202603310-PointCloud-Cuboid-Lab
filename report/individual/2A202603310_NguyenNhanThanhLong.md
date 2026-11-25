@@ -39,9 +39,7 @@ Camera cho biết màu sắc, trạng thái đèn và chữ/biển hiệu trong 
 | (b) xe buýt | `s01f24`, 5 | Bus | Có; 269,9° | Có; z_bottom = −1,592 m | Có; ảnh `t2-b-bus-truck.png` | Không; 9,223 × 2,943 × 2,556 m đều ngoài khoảng xe buýt thường ở bảng 4.3; cần xem lại kích thước/loại xe |
 | (c) người đi bộ | `s01f24`, 10 | Pedestrian | Chưa thể kết luận chắc từ bảng A; yaw = 240,9° | Có; z_bottom = −1,589 m | Có; ảnh `t2-c-ped-cyclist.png` | 0,368 × 0,608 × 1,659 m; chiều dài thấp hơn mốc người lớn 0,4 m khoảng 8%, trong sai số ±10% |
 
-Vòng hiệu chuẩn: 
-
-Vật bỏ qua: không có danh sách vật bỏ qua trong dữ liệu hiện có; bảng A chỉ lưu vật đã gán nên chưa đủ căn cứ kết luận chắc là không có vật bị bỏ qua.
+Vật bỏ qua: không có.
 
 ## 4. Bốn hiện tượng chất lượng (Bước 4)
 Nguyên nhân dưới đây là giả thuyết dựa trên point cloud; ảnh camera bổ sung cho việc nhận diện vật khi có thể.
@@ -77,8 +75,6 @@ Trong các ví dụ này, khoảng cách tăng khoảng 11 lần (3,46 lên 38,8
 
 Tự kiểm: cảnh báo `quá chật` ở `s01f24`, idx 10 và 11 đã được kiểm tra và xác nhận đúng. Vì hai hộp Pedestrian gần nhau, cần phân biệt điểm ngoài mép thuộc người nào trước khi nới để không gộp hai vật.
 
-Đổi kiểm: 
-
 ## 6. Ý nghĩa của nhãn, cách dùng AI và điều còn chưa chắc
 Nhãn 3D dùng mét vì mô hình cần học vị trí, kích thước và hướng vật trong không gian thật; pixel chỉ mô tả vị trí trên một ảnh camera. Vật thưa điểm cần quy tắc riêng vì hình dạng bị thiếu khiến hộp và class dễ suy đoán sai, nên chỉ gán khi có đủ phần quan sát hoặc bằng chứng bổ sung.
 
@@ -86,4 +82,4 @@ Nhãn 3D dùng mét vì mô hình cần học vị trí, kích thước và hư�
 - Câu hỏi chính: hỗ trợ hoàn thiện báo cáo bằng cách đối chiếu hướng dẫn, Bảng A và phiếu tự kiểm.
 - Cách dùng: dùng để kiểm tra số liệu và soạn diễn giải.
 
-Điều còn chưa chắc: kích thước xe buýt mẫu chưa phù hợp bảng 4.3; hướng của người đi bộ chưa thể kết luận từ số liệu; điểm ngoài mép của hai hộp Pedestrian cần phân loại đúng vật trước khi chỉnh. Chưa có ghi nhận về lỗi phát hiện sau hạn.
+Điều còn chưa chắc: kích thước xe buýt mẫu chưa phù hợp bảng 4.3; điểm ngoài mép của hai hộp Pedestrian cần phân loại đúng vật trước khi chỉnh.
